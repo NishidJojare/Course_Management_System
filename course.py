@@ -64,7 +64,7 @@ class Course:
         if len(self.table['Python-Django'][batch]) != 0:
             print('**************** Python-Django *****************\n')
             
-           
+            print(f'Batch : {batch}\n')
             for row in self.table['Python-Django'][batch]:
                 name = row['Name']
                 date_of_joining = row['Date of Joining']
@@ -83,7 +83,7 @@ class Course:
         if len(self.table['Data Analytics'][batch]) != 0:
             print('**************** Data Analytics ****************\n')  
               
-    
+            print(f'Batch : {batch}\n')
             for row in self.table['Data Analytics'][batch]:
                 name = row['Name']
                 date_of_joining = row['Date of Joining']
@@ -102,6 +102,7 @@ class Course:
         if len(self.table['Data Science'][batch]) != 0:
             print('**************** Data Science ****************\n') 
           
+            print(f'Batch : {batch}\n')
             for row in self.table['Data Science'][batch]:
                 name = row['Name']
                 date_of_joining = row['Date of Joining']
