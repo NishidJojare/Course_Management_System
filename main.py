@@ -7,7 +7,7 @@ objCourse=Course()
 def Menu():
     try:
         while True:
-            print("Choose any Menu:\n\n\t1. Show all Students \n\t2. Add Student\n\t3. View Batch-Wise Stats\n\t4. Exit\n")
+            print("Choose any Menu:\n\n\t1. Show all Students \n\t2. Add Student\n\t3. View Batch-Wise Stats\n\t4. Search Student\n\t5. Exit\n")
             menu=int(input("Enter a menu: "))
             objCourse.define_courses()
             if menu==1:
@@ -31,7 +31,13 @@ def Menu():
                objCourse.show_batch_wise_stats()
         
             elif menu==4:
+                objstudent.Search_Student()
+              
+            elif menu==5:
                 break  
+            
+            else:
+                print('Please enter valid menu...\n')
     
     except Exception as e:
         print(e)

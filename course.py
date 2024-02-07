@@ -62,7 +62,7 @@ class Course:
        
         # calculating course duration for python-django batch(both A and B)
         if len(self.table['Python-Django'][batch]) != 0:
-            print('**************** Python-Django ****************')
+            print('**************** Python-Django *****************\n')
             
            
             for row in self.table['Python-Django'][batch]:
@@ -72,6 +72,7 @@ class Course:
                 
                 print(f"Name: {name}\nDate of Joining: {date_of_joining.strftime('%d-%m-%Y')}")
                 print(f"Expected Completion Date: {expected_completion_date.strftime('%d-%m-%Y')}\n")
+                print('------------------------------------------------')
     
     
     # calculating course duration for Data Analytics batch(both A and B)
@@ -80,7 +81,7 @@ class Course:
         
             
         if len(self.table['Data Analytics'][batch]) != 0:
-            print('**************** Data Analytics ****************')  
+            print('**************** Data Analytics ****************\n')  
               
     
             for row in self.table['Data Analytics'][batch]:
@@ -90,6 +91,7 @@ class Course:
                 
                 print(f"Name: {name}\nDate of Joining: {date_of_joining.strftime('%d-%m-%Y')}")
                 print(f"Expected Completion Date: {expected_completion_date.strftime('%d-%m-%Y')}\n")
+                print('------------------------------------------------')
     
     
     # calculating course duration for Data Science batch(both A and B)
@@ -98,7 +100,7 @@ class Course:
           
         
         if len(self.table['Data Science'][batch]) != 0:
-            print('**************** Data Science ****************') 
+            print('**************** Data Science ****************\n') 
           
             for row in self.table['Data Science'][batch]:
                 name = row['Name']
@@ -108,7 +110,8 @@ class Course:
                 
                 
                 print(f"Name: {name}\nDate of Joining: {date_of_joining.strftime('%d-%m-%Y')}")
-                print(f"Expected Completion Date: {expected_completion_date.strftime('%d-%m-%Y')}\n")   
+                print(f"Expected Completion Date: {expected_completion_date.strftime('%d-%m-%Y')}\n")  
+                print('------------------------------------------------') 
     
     
     def get_python_batch(self):
@@ -172,16 +175,28 @@ class Course:
         delaysB_ds=self.calculate_delays(batch_b_completion_date_ds)
        
         print(f'''
-              1. Python
+                ------------------------------------------------------------------------------------------------------------------------
+                1. Python
                            a. Batch A - Start: {batch_a_start_date_python} : | End : {batch_a_completion_date_python} | Status : {"Ongoing" if delaysA_python>0 else f"Delayed by {abs(delaysA_python)} days"}
                            b. Batch B - Start: {batch_b_start_date_python} : | End : {batch_b_completion_date_python} | Status : {"Ongoing" if delaysB_python>0 else f"Delayed by {abs(delaysB_python)} days"}
-
-               2. Data Analytics 
+                
+                ------------------------------------------------------------------------------------------------------------------------
+                
+                2. Data Analytics 
                             a. Batch A - Start: {batch_a_start_date_da} : | End : {batch_a_completion_date_da} | Status : {"Ongoing" if delaysA_da>0 else f"Delayed by {abs(delaysA_da)} days"}
                             b. Batch B - Start: {batch_b_start_date_da} : | End : {batch_b_completion_date_da} | Status : {"Ongoing" if delaysB_da>0 else f"Delayed by {abs(delaysB_da)} days"}
 
-               3. Data Science   
+                ------------------------------------------------------------------------------------------------------------------------
+
+                3. Data Science   
                             a. Batch A - Start: {batch_a_start_date_ds} : | End : {batch_a_completion_date_ds} | Status : {"Ongoing" if delaysA_ds>0 else f"Delayed by {abs(delaysA_ds)} days"}
                             b. Batch B - Start: {batch_b_start_date_ds} : | End : {batch_b_completion_date_ds} | Status : {"Ongoing" if delaysB_ds>0 else f"Delayed by {abs(delaysB_ds)} days"}
+                
+                ------------------------------------------------------------------------------------------------------------------------
               ''')   
         
+        
+   
+            
+            
+            
