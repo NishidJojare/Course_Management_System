@@ -44,6 +44,13 @@ A simple course management system that allows you to add students, view batch-wi
    ```bash
       python main.py
 
+## Contributors:
+- Nishid Jojare[https://github.com/NishidJojare]
+- Pooja Surawar[https://github.com/Poojasurawar]
+- Roshan Vaidya[https://github.com/vaidyaroshan]
+- Vivek Nimbhorkar[https://github.com/my-github21]
+
+
 ## Contribution 
 Contributions are welcome! If you have any suggestions, issues, or improvements, feel free to open an issue or create a pull request.
 
